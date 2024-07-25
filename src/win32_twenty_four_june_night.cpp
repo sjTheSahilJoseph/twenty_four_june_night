@@ -1,5 +1,4 @@
 
-#include <stdlib.h>
 #include <windows.h>
  
 // Global variable 
