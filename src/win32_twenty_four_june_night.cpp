@@ -9,18 +9,15 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
 {
-    // Register the window class.
     const wchar_t CLASS_NAME[]  = L"Twenty Four June Night";
-    
+   
     WNDCLASS wc = { };
 
     wc.lpfnWndProc   = WindowProc;
-    wc.hInstance     = hInstance;
+    wc.hInstance     = hInstancen;
     wc.lpszClassName = CLASS_NAME;
 
     RegisterClass(&wc);
-
-    // Create the window.
 
     HWND hwnd = CreateWindowEx(
         0,                              // Optional window styles.
@@ -66,12 +63,12 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
     case WM_PAINT:
         {
-            PAINTSTRUCT ps;
+           PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hwnd, &ps);
 
             // All painting occurs here, between BeginPaint and EndPaint.
 
-            FillRect(hdc, &ps.rcPaint, (HBRUSH) (COLOR_WINDOW+1));
+            FillRect(hdc, &ps.rcPaint, (HBRUSH) (COLOR_WINDOW+2));
 
             EndPaint(hwnd, &ps);
         }
