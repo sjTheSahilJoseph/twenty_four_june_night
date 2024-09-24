@@ -401,3 +401,8 @@ vs
 .vs
 /.vs
 .vs/
+
+# executable
+/build
+*.obj
+*.exe
