@@ -404,5 +404,6 @@ vs
 
 # executable
 /build
+build
 *.obj
 *.exe
